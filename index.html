@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name=viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <h1>My Budget</h1>
+        <h2>New Item</h2>
+        <form>Item
+            <input id="user_input_1" type="text">
+            Amount
+            <input type="text" id ="user_input_2">
+            <input type="button" id="add" value="Add New">
+
+        </form>
+        <h2>Items Amount</h2>
+        <ul id='list'></ul>
+        <script type="text/javascript">
+            document.getElementById("add").onclick  = function() {
+    
+            var node = document.createElement("Li");
+            var text = document.getElementById("user_input_1").value;
+            var text1 = document.getElementById("user_input_2").value;
+            var textnode=document.createTextNode(text + " " + text1 + "$");
+            node.appendChild(textnode);
+            document.getElementById("list").appendChild(node);
+            document.getElementById('user_input_1').value = ''
+            document.getElementById('user_input_2').value = ''
+            }
+    </script>
+    </head>
+<body>
+
+</body>
+</html>
